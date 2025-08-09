@@ -1,0 +1,181 @@
+body {
+    background-image: url('bg.jpg'); /* Add image to your project directory */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+h1, h2, h3, .stTextArea, .stButton {
+    font-family: 'Cooper BT', 'Times New Roman', Times, serif;
+    color: #1a0b6b;
+}
+
+button {
+    background-color: #2e3c7d !important;
+    color: white !important;
+    font-weight: bold !important;
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+label {
+    font-weight: bold;
+    color: #2e3c7d;
+    font-size: 16px;
+    display: block;
+}
+
+.stTextArea textarea {
+    background-color: #b9aec9;
+}
+
+.custom-success {
+    background-color: #e6ffed;
+    border-left: 5px solid #28a745;
+    padding: 15px 20px;
+    margin-top: 20px;
+    color: #155724;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ========== TAB STYLING ========== */
+
+/* Tab container */
+.stTabs [data-baseweb="tab-list"] {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Individual tab buttons */
+.stTabs [data-baseweb="tab"] {
+    background-color: transparent;
+    color: #2e3c7d;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 8px;
+    margin: 2px;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    font-family: 'Cooper BT', 'Times New Roman', Times, serif;
+}
+
+/* Tab hover effect */
+.stTabs [data-baseweb="tab"]:hover {
+    background-color: rgba(46, 60, 125, 0.1);
+    border-color: #2e3c7d;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(46, 60, 125, 0.2);
+}
+
+/* Active/Selected tab */
+.stTabs [data-baseweb="tab"][aria-selected="true"] {
+    background-color: #2e3c7d !important;
+    color: white !important;
+    border-color: #2e3c7d;
+    box-shadow: 0 4px 12px rgba(46, 60, 125, 0.3);
+}
+
+/* Tab content area */
+.stTabs [data-baseweb="tab-panel"] {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 10px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(46, 60, 125, 0.2);
+}
+
+/* Alternative modern gradient style for tabs */
+.stTabs [data-baseweb="tab-list"].modern-gradient {
+    background: linear-gradient(135deg, rgba(46, 60, 125, 0.1), rgba(26, 11, 107, 0.1));
+    border: 1px solid rgba(46, 60, 125, 0.2);
+}
+
+/* Animated underline for tabs */
+.stTabs [data-baseweb="tab"]::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #2e3c7d, #1a0b6b);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.stTabs [data-baseweb="tab"][aria-selected="true"]::after {
+    width: 80%;
+}
+
+/* Tab text styling */
+.stTabs [data-baseweb="tab"] p {
+    margin: 0 !important;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive tab styling */
+@media (max-width: 768px) {
+    .stTabs [data-baseweb="tab"] {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+    
+    .stTabs [data-baseweb="tab-list"] {
+        flex-wrap: wrap;
+    }
+}
+
+/* Custom tab colors for different sections */
+.stTabs [data-baseweb="tab"][data-tab="user-management"] {
+    border-left: 4px solid #28a745;
+}
+
+.stTabs [data-baseweb="tab"][data-tab="audit-logs"] {
+    border-left: 4px solid #ffc107;
+}
+
+.stTabs [data-baseweb="tab"][data-tab="add-user"] {
+    border-left: 4px solid #17a2b8;
+}
+
+/* Tab loading animation */
+@keyframes tab-load {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.stTabs [data-baseweb="tab-panel"] {
+    animation: tab-load 0.3s ease-out;
+}
+
+/* Dark theme tab styling */
+@media (prefers-color-scheme: dark) {
+    .stTabs [data-baseweb="tab-list"] {
+        background-color: rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .stTabs [data-baseweb="tab"] {
+        color: #ffffff;
+    }
+    
+    .stTabs [data-baseweb="tab"]:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .stTabs [data-baseweb="tab-panel"] {
+        background-color: rgba(0, 0, 0, 0.2);
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+}
