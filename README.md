@@ -23,7 +23,7 @@ It intelligently extracts key invoice details from **images or PDFs**, stores th
 
 | Component | Technology Used |
 |------------|-----------------|
-| **Frontend** ->Streamlit |
+| **Frontend** | Streamlit |
 | **AI Model** | Gemini 2.5 Flash |
 | **Backend Database** | SQL Server (Supports Oracle/MySQL) |
 | **Language** | Python 3.x |
